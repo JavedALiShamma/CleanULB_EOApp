@@ -11,15 +11,13 @@ import { useState } from 'react'
         ulbname:"",
         id:""
     })
-  return (
-            <div>
+  return (<div>
            
                 <UserDataContext.Provider value={{user, setUser}}>
                     {children}  </UserDataContext.Provider>
             
             </div>
-           
-   
+
   )
 }
 export default UserContext;

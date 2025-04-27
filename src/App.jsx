@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from './home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/login';
-import UserContext from "../../Frontend/src/Context/userContext"
+// import UserContext from "../../Frontend/src/Context/userContext"
+import UserContext from "../src/Context/userContext"
 import { Dashboard } from './pages/dashboard';
 import { UserProtectedWrapper } from './pages/UserProtectedWrapper';
 import { UserLogout } from './pages/UserLogout';
