@@ -8,7 +8,8 @@ import { UserDataContext } from "../Context/userContext";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import cleanCityLogo from "../assets/icons/cleanCityLogo.jpeg"
 import { useNavigate } from "react-router-dom";
-import bins from "../assets/icons/bins.png"
+// import bins from "../assets/icons/bins.png"
+import bins from "../assets/icons/bin.png";
 import recycleTruck from "../assets/icons/recycling-truck.png"
 import toilet from "../assets/icons/bathroom.png"
 import GD from "../assets/icons/GD.png"
