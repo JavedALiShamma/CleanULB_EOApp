@@ -23,9 +23,12 @@ const App = () => {
    <Route path="/login" element={<Login />} />
   {/* <Route path="/signup" element={<Signup />} /> */}
   <Route path="/" element={<LandingPage />} />
-  <Route path="/dashboard/*" element={<UserProtectedWrapper>
+  {/* <Route path="/dashboard/*" element={<UserProtectedWrapper>
     <HomePanel />
-  </UserProtectedWrapper>}/>
+  </UserProtectedWrapper>}/> */}
+  <Route path="/dashboard/*" element={
+    <HomePanel />
+  }/>
  
   <Route path='/ulb/logout' element={ <UserProtectedWrapper>
     <UserLogout />
