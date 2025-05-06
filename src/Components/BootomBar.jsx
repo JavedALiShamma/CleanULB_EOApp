@@ -27,7 +27,15 @@ function NavItem({ icon, id }) {
         navigate("/dashboard");
       }
       if(e.target.id === "wards"){
-        navigate("/wards");
+       
+        navigate({
+          pathname:"/dashboard/wards",
+        });
+      }
+     if(e.target.id=="profile"){
+        navigate({
+          pathname:"/dashboard/profile",
+        });
       }
       
   }

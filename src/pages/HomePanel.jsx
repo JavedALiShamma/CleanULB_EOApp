@@ -7,6 +7,7 @@ import {BootomBar} from "../Components/BootomBar";
 import { UserDataContext } from '../Context/userContext';
 import Tippers from '../Components/AutoTippers/index';
 import WardsCleaning from '../wardsCleaning/index';
+import UserProfile from './profile';
 const HomePanel = () => {
     const { user } = useContext(UserDataContext);
     console.log(user);
@@ -16,8 +17,10 @@ const HomePanel = () => {
         <Routes>
             <Route path="/bins" element={<BinsArea/>}/>
             <Route path="/tippers" element={<Tippers/>}/>
-            <Route path="/*" element={<Dashboard/>}/>
             <Route path="/wards" element={<WardsCleaning/>}/>
+            <Route path="/profile" element={<UserProfile/>}/>
+            <Route path="/*" element={<Dashboard/>}/>
+            
 
         </Routes>
         <BootomBar/>

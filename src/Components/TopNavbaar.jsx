@@ -19,6 +19,29 @@ function CustomNavbar() {
         pathname: "/dashboard/wards",
       });
     }
+    if(e.target.id === "bins"){
+      setShow(false);
+      navigate({
+        pathname: "/dashboard/bins",
+      });
+    }
+    if(e.target.id === "auto-tipper"){
+      setShow(false);
+      navigate({
+        pathname: "/dashboard/tippers",
+      });
+    }
+    if(e.target.id === "profile"){
+      setShow(false);
+      navigate({
+        pathname: "/dashboard/profile",
+      });
+    }
+  }
+  const navBarStyle={
+      // background: "#51AE36",
+      background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)",fontSize:"1.2rem"
+
   }
   return (
     <>
@@ -50,12 +73,9 @@ function CustomNavbar() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link onClick={handClick} id="home" style={{background: "#51AE36",
-              background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)",fontSize:"1.2rem"}} className="w-100 border text-white my-1 rounded p-2"   href="#">Home</Nav.Link>
-            <Nav.Link onClick={handClick} id="wards" style={{background: "#51AE36",
-              background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)"}} className="w-100 border text-white my-1 rounded p-2" href="#">Wards Cleaning</Nav.Link>
-            <Nav.Link id="bins" style={{background: "#51AE36",
-              background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)"}} className="w-100 border text-white my-1 rounded p-2" href="#">Bins Cleaned</Nav.Link>
+            <Nav.Link onClick={handClick} id="home" style={navBarStyle} className="w-100 border text-white my-1 rounded p-2"   href="#">Home</Nav.Link>
+            <Nav.Link onClick={handClick} id="wards" style={navBarStyle} className="w-100 border text-white my-1 rounded p-2" href="#">Wards Cleaning</Nav.Link>
+            <Nav.Link onClick={handClick} id="bins" style={navBarStyle} className="w-100 border text-white my-1 rounded p-2" href="#">Bins Cleaned</Nav.Link>
 
           </Nav>
           <div style={{
@@ -70,12 +90,9 @@ function CustomNavbar() {
             </div>
           </div>  
           <Nav className="flex-column">
-            <Nav.Link style={{background: "#51AE36",
-              background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)",fontSize:"1.2rem"}} className="w-100 border text-white my-1 rounded p-2">Auto-Tippers</Nav.Link>
-            <Nav.Link  style={{background: "#51AE36",
-              background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)"}} className="w-100 border text-white my-1 rounded p-2">Zones</Nav.Link>
-            <Nav.Link style={{background: "#51AE36",
-              background: "linear-gradient(90deg,rgba(81, 174, 54, 0.85) 0%, rgba(123, 203, 41, 0.88) 50%)"}} className="w-100 border text-white my-1 rounded p-2">Bins Cleaned</Nav.Link>
+            <Nav.Link onClick={handClick} id="auto-tipper" style={navBarStyle} className="w-100 border text-white my-1 rounded p-2">Auto-Tippers</Nav.Link>
+            <Nav.Link  style={navBarStyle} className="w-100 border text-white my-1 rounded p-2">Zones</Nav.Link>
+            <Nav.Link onClick={handClick} id="profile" style={navBarStyle} className="w-100 border text-white my-1 rounded p-2">Profile</Nav.Link>
 
           </Nav>
         </Offcanvas.Body>
