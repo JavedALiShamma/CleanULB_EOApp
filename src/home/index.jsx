@@ -14,6 +14,13 @@ import recycleTruck from "../assets/icons/recycling-truck.png"
 import toilet from "../assets/icons/bathroom.png"
 import GD from "../assets/icons/GD.png"
 import publicPlace from "../assets/icons/publicPlace.png"
+import bgImage from "../assets/icons/BgImage.png"
+import styles from "./styles.module.css"
+import googleMapLocations from "../assets/icons/googleMapLocations.png"
+import userCharge from "../assets/icons/userCharge.png"
+import CardCarousel from "../Components/Swipeable Cards/SwipeCardSection"
+import MunicipalityDashboardSection from "../Components/MunicplaityDashbaordSection";
+import Footer from "../Components/Footer";
 const LandingPage = () => {
   // useContext(UserDataContext);
   const navigate = useNavigate();
@@ -26,7 +33,7 @@ const LandingPage = () => {
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: "white" ,color:"black"}}>
         <div className="container">
           <img style={{width:"4rem",height:"4rem"}} src={cleanCityLogo} alt="" />
-          <a style={{fontFamily:"'Poppins', sans-serif"}} className="navbar-brand fw-bold text-success" href="#">Clean City</a>
+          <a style={{fontFamily:"'Poppins', sans-serif"}} className="navbar-brand fw-bold text-success" href="#">Clean ULB</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -96,8 +103,8 @@ const LandingPage = () => {
             </div>
             <div className="col-md-4 col-sm-12 animate__animated animate__zoomIn animate__delay-4s">
               <FontAwesomeIcon icon={faCity} size="4x" style={{ color: "#f39c12" }} />
-              <h4 style={{ color: "#f39c12" }}>Cleaner Streets</h4>
-              <p>Partnering with communities to maintain clean surroundings.</p>
+              <h4 style={{ color: "#f39c12" }}>User charge Collection</h4>
+              <p>Collection of user charges from the citizen through mobile app </p>
             </div>
             <div className="m-2"></div>
             <div className="col-md-4 col-sm-12 animate__animated animate__zoomIn animate__delay-4s">
@@ -121,15 +128,62 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
+   
       {/* Footer */}
-      <footer className="text-white text-center py-4" style={{ backgroundColor: "#1c1e21" }}>
+   
+    </div>
+    <section className="w-100">
+      {/* <img className="bg-image w-100" src={bgImage} alt="" />
+      <div className="container text-center py-5" style={{ position: "", zIndex: 1 }}>
+        <h2 className="text-black fw-bold">Join Us in Making a Difference</h2>
+        <p className="text-black">Together, we can create cleaner and healthier urban spaces.</p>
+        <a className="btn btn-warning text-dark" href="#contact">Contact Us</a>
+        </div> */}
+        <div className="w-100 position-relative" style={{ overflow: "hidden" ,height:"100vh"}}>
+      <img
+        src={bgImage}
+        alt="Earth Background"
+        className="bg-image w-100 h-100 position-absolute"
+        style={{ objectFit: "contain", zIndex: -1, opacity:"0.2" }}
+      />
+      <div className="content text-start">
+        <p className="text-center text-primary p-2"> Let's explain what we are doing</p>
+      </div>
+      <div className="w-100 container my-4">
+       {/* <div className="row">
+        <div className="col-12 col-md-6 col-lg-4 mb-4">
+          <div className="card h-100 shadow-sm">
+            <div className="card-body">
+              <h5 className="card-title text-center">Iot Based Monitoring of the Vehicles </h5>
+              <img className="w-100" src={googleMapLocations} alt="" />
+              <p className="card-text text-center">We are providing Iot based monitoring of the vehicles to track the location of the vehicles and monitor their working. Urban local body can monitor through the dashboard , and a descriptive reports are sent to the urban local body in the end of the month</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-12 col-md-6 col-lg-4 mb-4">
+          <div className="card h-100 shadow-sm">
+            <div className="card-body">
+              <h5 className="card-title text-center text-warning">Collection of User charges </h5>
+              <img  className="w-100" src={googleMapLocations} alt="" />
+              <p className="card-text text-center">We are providing Iot based monitoring of the vehicles to track the location of the vehicles and monitor their working. Urban local body can monitor through the dashboard , and a descriptive reports are sent to the urban local body in the end of the month</p>
+            </div>
+          </div>
+        </div>
+       </div> */}
+        
+        {/* <h2>Hello</h2> */}
+        <CardCarousel/>
+        <div className="h-50"></div>
+      </div>
+    </div>
+    <MunicipalityDashboardSection/>
+    </section>
+    {/* <footer className="text-white text-center py-4" style={{ backgroundColor: "#1c1e21" }}>
         <div className="container">
           <p className="mb-0">&copy; 2025 ServiceCo. All rights reserved.</p>
         </div>
-      </footer>
-    </div>
-
+      </footer> */}
+      <Footer/>
 
     </div>
    

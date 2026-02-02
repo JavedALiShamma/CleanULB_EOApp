@@ -18,7 +18,7 @@ const App = () => {
     <BrowserRouter>
 
 <Routes>
-  /// Here we will create the routes for login and signup
+ 
   
    <Route path="/login" element={<Login />} />
   {/* <Route path="/signup" element={<Signup />} /> */}
