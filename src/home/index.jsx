@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
@@ -14,20 +15,32 @@ import recycleTruck from "../assets/icons/recycling-truck.png"
 import toilet from "../assets/icons/bathroom.png"
 import GD from "../assets/icons/GD.png"
 import publicPlace from "../assets/icons/publicPlace.png"
+import citizenFeedback from "../assets/icons/citizenFeedback2.png"
 import bgImage from "../assets/icons/BgImage.png"
 import styles from "./styles.module.css"
-import googleMapLocations from "../assets/icons/googleMapLocations.png"
-import userCharge from "../assets/icons/userCharge.png"
+// import googleMapLocations from "../assets/icons/googleMapLocations.png"
+// import userCharge from "../assets/icons/userCharge.png"
 import CardCarousel from "../Components/Swipeable Cards/SwipeCardSection"
 import MunicipalityDashboardSection from "../Components/MunicplaityDashbaordSection";
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer"; 
+import Snowfall from 'react-snowfall';
+import SwachhSurvekshanSection from "../Components/SwachhSurvekshanSection";
+
 const LandingPage = () => {
   // useContext(UserDataContext);
   const navigate = useNavigate();
   return (
     //51AE36 // 7BCB29
     <div className="">
-      
+      <Snowfall/>
+      {/* <Snowfall
+      // Changes the snowflake color
+        color="green"
+      // Applied to the canvas element
+        // style={{ background: '#fff' }}
+      // Controls the number of snowflakes that are created (default 150)
+        snowflakeCount={200}
+        /> */}
        <div className="landing-page" style={{ background: "linear-gradient(to right,rgba(122, 203, 41, 0.83),rgba(80, 174, 54, 0.75))", color: "white" }}>
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" style={{ backgroundColor: "white" ,color:"black"}}>
@@ -48,20 +61,20 @@ const LandingPage = () => {
           <div className="collapse navbar-collapse text-success" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link text-dark" href="#home">Home</a>
+                <a className={`nav-link ${styles.custom_nav_link}`} onClick={()=>navigate("/")} >Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark" href="services">Services</a>
+                <a className={`nav-link ${styles.custom_nav_link}`} href="services">Services</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark" href="contact">Contact</a>
+                <a className={`nav-link ${styles.custom_nav_link}`} href="contact">Contact</a>
               </li>
               <li className="w-100 f-lex justify-content-around align-items-center gap-3">
               
                 <a className="btn btn-outline-success me-2" href="login">Login</a>
               
               
-                <a onClick={()=>{navigate("/dashboard")}} className="btn btn-warning text-dark" >Sign Up</a>
+                {/* <a onClick={()=>{navigate("/dashboard")}} className="btn btn-warning text-dark" >Sign Up</a> */}
               
               </li>
             </ul>
@@ -125,6 +138,12 @@ const LandingPage = () => {
               <h4 style={{ color: "#a8dee5" }}>Public Place Monitoring</h4>
               <p>Monitoring of cleanliness of public places through software.</p>
             </div>
+            <div className="col-md-4 col-sm-12 animate__animated animate__zoomIn animate__delay-4s">
+              {/* <FontAwesomeIcon icon={faCity} size="4x" style={{ color: "#f39c12" }} /> */}
+              <img style={{width:"6rem",height:"6rem"}} src={citizenFeedback} alt="Citizen feedback" />
+              <h4 style={{ color: "orange" }}>Citizen Feedback</h4>
+              <p>Citizen feedback can  be collected for Swachh Survekshan</p>
+            </div>
           </div>
         </div>
       </section>
@@ -139,6 +158,7 @@ const LandingPage = () => {
         <p className="text-black">Together, we can create cleaner and healthier urban spaces.</p>
         <a className="btn btn-warning text-dark" href="#contact">Contact Us</a>
         </div> */}
+        <SwachhSurvekshanSection/>
         <div className="w-100 position-relative" style={{ overflow: "hidden" ,height:"100vh"}}>
       <img
         src={bgImage}
@@ -148,8 +168,9 @@ const LandingPage = () => {
       />
       <div className="content text-start">
         <p className="text-center text-primary p-2"> Let's explain what we are doing</p>
+        
       </div>
-      <div className="w-100 container my-4">
+      <div className="w-100 container my-1">
        {/* <div className="row">
         <div className="col-12 col-md-6 col-lg-4 mb-4">
           <div className="card h-100 shadow-sm">

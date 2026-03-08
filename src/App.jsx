@@ -11,6 +11,7 @@ import { UserLogout } from './pages/UserLogout';
 // import { UserContext } from './Context/userContext';
 import BinsArea from './Components/BinsArea';
 import HomePanel from './pages/HomePanel';
+import SwachhSurvekshanDashboard from './Components/SwachhSurvekshan/SwachhSurvekshanDashboard';
 const App = () => {
   return (
     <>
@@ -26,10 +27,12 @@ const App = () => {
   {/* <Route path="/dashboard/*" element={<UserProtectedWrapper>
     <HomePanel />
   </UserProtectedWrapper>}/> */}
+  {/* Public Routes */}
+  <Route path ="/SwachhSurvekshan/SwachhSurvekshanDashboard" element={<SwachhSurvekshanDashboard />} />
   <Route path="/dashboard/*" element={
     <HomePanel />
   }/>
- 
+  
   <Route path='/ulb/logout' element={ <UserProtectedWrapper>
     <UserLogout />
   </UserProtectedWrapper>}/>

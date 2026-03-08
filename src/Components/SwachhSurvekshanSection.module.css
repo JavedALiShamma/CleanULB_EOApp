@@ -1,0 +1,28 @@
+.swachhSection {
+  background: linear-gradient(135deg, #f4fff6, #ffffff);
+}
+
+.badge {
+  display: inline-block;
+  background-color: #198754;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.image {
+  max-height: 380px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

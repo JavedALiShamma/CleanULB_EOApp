@@ -15,3 +15,12 @@
     opacity: 0.3; /* Lower opacity */
     z-index: 1;
 }
+.custom_nav_link:hover{
+    background-color: #d2f5a6 !important; /* light green */
+    border-radius: 2%;
+    color: white;
+    text-align: center;
+    text-decoration: solid;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}

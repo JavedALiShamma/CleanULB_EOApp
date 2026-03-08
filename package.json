@@ -19,6 +19,7 @@
     "animate.css": "^4.1.1",
     "axios": "^1.8.4",
     "bootstrap": "^5.3.8",
+    "gsap": "^3.14.2",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.487.0",
     "react": "^19.0.0",
@@ -30,6 +31,7 @@
     "react-icons": "^5.5.0",
     "react-router": "^7.4.1",
     "react-router-dom": "^7.4.1",
+    "react-snowfall": "^2.4.0",
     "recharts": "^2.15.3",
     "swiper": "^11.2.10"
   },
