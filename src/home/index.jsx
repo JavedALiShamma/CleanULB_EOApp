@@ -64,7 +64,7 @@ const LandingPage = () => {
                 <a className={`nav-link ${styles.custom_nav_link}`} onClick={()=>navigate("/")} >Home</a>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${styles.custom_nav_link}`} href="services">Services</a>
+                <a className={`nav-link ${styles.custom_nav_link}`} onClick={()=>navigate("/contact")} >Services</a>
               </li>
               <li className="nav-item">
                 <a className={`nav-link ${styles.custom_nav_link}`} href="contact">Contact</a>

@@ -12,6 +12,7 @@ import { UserLogout } from './pages/UserLogout';
 import BinsArea from './Components/BinsArea';
 import HomePanel from './pages/HomePanel';
 import SwachhSurvekshanDashboard from './Components/SwachhSurvekshan/SwachhSurvekshanDashboard';
+import Contact from "./Components/ContactPage";
 const App = () => {
   return (
     <>
@@ -32,7 +33,7 @@ const App = () => {
   <Route path="/dashboard/*" element={
     <HomePanel />
   }/>
-  
+  <Route path ="/contact" element={<Contact />} />
   <Route path='/ulb/logout' element={ <UserProtectedWrapper>
     <UserLogout />
   </UserProtectedWrapper>}/>
